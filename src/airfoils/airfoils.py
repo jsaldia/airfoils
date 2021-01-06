@@ -84,7 +84,7 @@ class Airfoil:
         self._y_upper_interp = interp1d(
             self._x_upper,
             self._y_upper,
-            kind='cubic',
+            kind='linear',
             bounds_error=False,
             fill_value="extrapolate"
         )
@@ -92,7 +92,7 @@ class Airfoil:
         self._y_lower_interp = interp1d(
             self._x_lower,
             self._y_lower,
-            kind='cubic',
+            kind='linear',
             bounds_error=False,
             fill_value="extrapolate"
         )
