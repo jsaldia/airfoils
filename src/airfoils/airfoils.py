@@ -128,8 +128,8 @@ class Airfoil:
         re_4digits = re.compile(r"^\d{4}$")
 
         if re_4digits.match(naca_digits):
-            p = float(naca_digits[0])/10
-            m = float(naca_digits[1])/100
+            m = float(naca_digits[0])/100
+            p = float(naca_digits[1])/10            
             xx = float(naca_digits[2:4])/100
         else:
             raise NACADefintionError("Identifier not recognised as valid NACA 4 definition")
